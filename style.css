@@ -1,0 +1,263 @@
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
+}
+body{
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(#131b22 , #11323f, rgb(34, 94, 61));
+}
+h1 {
+    font-size: 12px;
+    font-style: italic;
+    padding-bottom: 10px;
+}
+.layangateh{
+  position: absolute;
+  top: -205px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 70px;
+  width: 100%;
+  justify-content: space-around;
+  
+}
+.layangateh span{
+  height: 50px;
+  width: 50px;
+  border-radius: 3px;
+  background: rgba(72, 120, 122, 0.178);
+  animation: move 10s linear infinite;
+  position: relative;
+  overflow: hidden;
+}
+@keyframes move {
+  100%{
+    transform: translateY(+150vh);
+  }
+}
+.layangateh span.ciek{
+  animation-delay: 1.8s;
+  transform: scale(2.15)
+}
+.layangateh span.duo{
+  animation-delay: 3.5s;
+  transform: scale(3.55)
+}
+.layangateh span.tigo{
+  animation-delay: 0.2s;
+  transform: scale(0.35)
+}
+.layangateh span.ampek{
+  animation-delay: 6s;
+  transform: scale(2.15)
+}
+.layangateh span.limo{
+  animation-delay: 7s;
+  transform: scale(0.5)
+}
+.layangateh span.anam{
+  animation-delay: 1.5s;
+  transform: scale(2.5)
+}
+.layangateh span.tujuah{
+  animation-delay: 8s;
+  transform: scale(3.5)
+}
+.layangateh span.lapan{
+    animation-delay: 10s;
+    transform: scale(2.5)
+  }
+
+.layangateh span:before{
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 60px;
+  width: 40%;
+  transform: skew(45deg) translateX(150px);
+  background: rgba(255, 255, 255, 0.15);
+  animation: mirror 3s linear infinite;
+}
+@keyframes mirror {
+  100%{
+    transform: translateX(-450px);
+  }
+}
+.layangateh span.ciek:before{
+  animation-delay: 1.5s;
+}
+.layangateh span.duo:before{
+  animation-delay: 3.5s;
+}
+.layangateh span.tigo:before{
+  animation-delay: 2.5s;
+}
+.layangateh span.ampek:before{
+  animation-delay: 7.5s;
+}
+.layangateh span.limo:before{
+  animation-delay: 4.5s;
+}
+.layangateh span.anam:before{
+  animation-delay: 0.5s;
+}
+.layangateh span.tujuah:before{
+  animation-delay: 6s;
+}
+.layangateh span.lapan:before{
+    animation-delay: 5.1s;
+  }
+
+.container {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    padding-top: 25px;
+    place-items: center;
+    backdrop-filter: blur(3px);
+}
+
+.calculator {
+    position: relative;
+    height: auto;
+    width: auto;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 30px #000;
+}
+
+.theme-toggler {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    color: #fff;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.theme-toggler.active {
+    color: #333;
+}
+
+.theme-toggler.active::before {
+    background-color: #fff;
+}
+
+.theme-toggler::before {
+    content: '';
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background-color: #333;
+    z-index: -1;
+}
+
+#display {
+    margin: 0 10px;
+    height: 150px;
+    width: auto;
+    max-width: 270px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    font-size: 30px;
+    margin-bottom: 20px;
+    overflow-x: scroll;
+  }
+
+#display::-webkit-scrollbar {
+    display: block;
+    height: 3px;
+}
+
+button {
+    height: 60px;
+    width: 60px;
+    border: 0;
+    border-radius: 10px;
+    margin: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 200ms ease;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+button#equal {
+    height: 130px;
+}
+
+.calculator {
+    background-color: #ffffff2f;
+}
+
+.calculator #display {
+    color: #0a1e23;
+}
+
+.calculator button#clear {
+    background-color: #9ef1df7c;
+    color: #fc4552;
+    font-weight: 551;
+    font-size: 26px;
+}
+
+.calculator button.btn-number {
+    background-color: #c3eaff7c;
+    color: #000000;
+    font-size: 26px;
+}
+
+.calculator button.btn-operator {
+    background-color: #9dfca97c;
+    color: #194436;
+    font-size: x-large;
+    font-weight: 551;
+  }
+  
+.calculator button.btn-equal {
+    background-color: #8ee4d07c;
+    color: #000;
+}
+
+.calculator.dark {
+    background-color: #0711154f;
+}
+
+.calculator.dark #display {
+    color: #f8fafb;
+}
+
+.calculator.dark button#clear {
+    background-color: #063d31c2;
+    color: #bd3740;
+}
+
+.calculator.dark button.btn-number {
+    background-color: #051029c2;
+    color: #f8fafb;
+}
+
+.calculator.dark button.btn-operator {
+    background-color: #16012bc2;
+    color: #554d02;
+}
+  
+.calculator.dark button.btn-equal {
+    background-color: #02012bc2;
+    color: #ffffff;
+}
